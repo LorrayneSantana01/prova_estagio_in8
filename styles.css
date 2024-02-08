@@ -1,0 +1,287 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url('/Fonts/HelveticaUltraLt_0.ttf');
+}
+
+@font-face {
+    font-family: 'ps';
+    src: url('./Fonts/ps.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoLight';
+    src: url('./Fonts/Roboto-Light_0.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('/Fonts/Roboto-Regular_0.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    /* border: #ff0000 1px solid; */
+}
+
+/* PARTE REFERENTE AO CABEÇALHO */
+
+.toda_a_pagina { /*CONFIGURAÇÕES COMUNS DE TODA A PÁGINA*/
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+#cabecalho { /*CONFIGURAÇÕES COMUNS DO CABEÇALHO*/
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.logo_cabecalho {
+    height: 100%;
+    width: 50%;
+}
+
+.logo_cabecalho a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logo_IN8 { /*A IMAGEM LOGO*/
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+}
+
+.itens_cabecalho { /*AS OPÇÕES DE MENU*/
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.menu_item:hover {
+    text-decoration: underline;
+    color: white;
+    text-underline-offset: 5px;
+}
+
+.menu_item { /*AS OPÇÕES DE MENU*/
+    margin: 0px 2% 0px 2%;
+    color: white;
+    text-decoration: none;
+}
+
+/* PARTE REFERENTE A APRESENTAÇÃO */
+
+.imagem_fundo { /*CONFIGURAÇÕES DA IMAGEM DA APRESENTAÇÃO*/
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#apresentacao_prova { /*CONFIGURAÇÕES COMUNS DA APRESENTAÇÃO*/
+    padding: 40vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    font-family: 'ps';
+    color: white;
+    font-weight: 100;
+    text-align: left;
+    font-size: 8vh;
+}
+
+.textos_pagina_apresentacao { /*CONFIGURAÇÕES DO TEXTO 'ESTÁGIO'*/
+    font-size: 8vh;
+}
+
+.sub_texto_pagina_apresentacao { /*CONFIGURAÇÕES DO TEXTO 'PROVA_DE_SELEÇÃO'*/
+    font-size: 3.5vh;
+}
+
+/* PARTE REFERENTE AO CADASTRO  */
+
+#fazer_cadastro {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #29abe2;
+    font-weight: 100;
+    text-align: center;
+    font-size: 2vh;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    width: 30%;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+input[type="date"] {
+    color: #ffffff;
+  }
+
+input::placeholder {
+    color: white;
+    background: none;
+    margin: none;
+}
+
+input:focus {
+    color: white;
+    outline: none;
+}
+
+input:valid {
+    margin: none;
+}
+
+.botao_cadastrar {
+    background-color: #012d51;
+    color: #29abe2;
+    cursor: pointer;
+    font-family: 'ps';
+    font-size: 25px;
+    padding: 1% 5% 1% 5% ;
+}
+
+#botao_cadastrar_container {
+    width: 100%;
+    display: flex;
+    justify-content: center
+}
+
+/* PARTE REFERENTE A LISTA DE CONTATOS  */
+
+#lista_contatos {
+    background-color: none;
+    color: #000;
+    width: 40%;
+    text-align: -webkit-center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+/* table */
+#tabela_cadastros {
+    max-width: 60%;
+    border-collapse: collapse;
+}
+
+#tabela_cadastros th, #tabela_cadastros td{
+    padding:0.8em;
+    text-align: center;
+}
+
+table tr th {
+    border-right: 1px solid #29abe2;
+}
+
+table tr th:last-child {
+    border-right: none;
+}
+
+table tr td {
+    border-top: 1px solid #29abe2;
+    border-right: 1px solid #29abe2;
+}
+
+table tr td:last-child {
+    border-top: 1px solid #29abe2;
+    border-right: none;
+}
+
+/* PARTE REFERENTE AO RODAPÉ */
+
+.rodape { /*CONFIGURAÇÕES COMUNS DO RODAPÉ*/
+    width: 100%;
+    height: 35vh;
+    background-image:url(./imagens/rodape-desktop.jpg);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+.rodape_infos { /*CONFIGURAÇÕES DAS INFORMAÇÕES*/
+    font-size: 14px;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.background_section_one {
+	background-image: url('./imagens/index-image.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+    z-index: -1;
+}
+.parallex_bg_img {
+	background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20201009/pngtree-dark-green-cyan-paper-cut-minimalist-background-for-brochure-poster-banner-image_405384.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
