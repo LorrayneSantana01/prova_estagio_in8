@@ -44,6 +44,8 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
+    backdrop-filter: blur(5px);
+    background: linear-gradient(#000000bb, #00000000);
 }
 
 .logo_cabecalho {
@@ -73,6 +75,14 @@
     height: 100%;
     justify-content: flex-start;
     align-items: center;
+    font-family: 'Helvetica';
+    font-size: 20px;
+}
+
+#cabecalho p {
+    color: white;
+    text-decoration: none;
+    cursor: default;
 }
 
 .menu_item:hover {
@@ -100,18 +110,25 @@
     z-index: -1;
 }
 
+.background_section_apresentacao {
+	background-image: url('./imagens/index-image.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+    z-index: -1;
+}
+
 #apresentacao_prova { /*CONFIGURAÇÕES COMUNS DA APRESENTAÇÃO*/
-    padding: 40vh;
+    padding: 50vh 0px 50vh 40vh;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: center;
-    font-family: 'ps';
+    font-family: 'Helvetica';
     color: white;
     font-weight: 100;
     text-align: left;
-    font-size: 8vh;
 }
 
 .textos_pagina_apresentacao { /*CONFIGURAÇÕES DO TEXTO 'ESTÁGIO'*/
@@ -132,9 +149,14 @@
     align-items: center;
     color: white;
     background-color: #29abe2;
-    font-weight: 100;
     text-align: center;
-    font-size: 2vh;
+    font-family: 'Helvetica';
+    font-size: 25px;
+    font-weight: 100;
+}
+
+#fazer_cadastro h1 {
+    font-size: 25px;
 }
 
 .formulario {
@@ -158,21 +180,28 @@ input {
     background: none;
     border: none;
     border-bottom: 1px solid white;
+    color: white;
 }
 
 input[type="date"] {
     color: #ffffff;
+    font-family: 'Helvetica';
+    font-size: 25px;
   }
 
 input::placeholder {
     color: white;
     background: none;
     margin: none;
+    font-family: 'Helvetica';
+    font-size: 25px;
 }
 
 input:focus {
     color: white;
     outline: none;
+    font-family: 'Helvetica';
+    font-size: 25px;
 }
 
 input:valid {
@@ -185,7 +214,14 @@ input:valid {
     cursor: pointer;
     font-family: 'ps';
     font-size: 25px;
-    padding: 1% 5% 1% 5% ;
+    padding: 1% 5% 1% 5%;
+    border-width: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Helvetica';
+    font-size: 25px;
+    font-weight: 100;
 }
 
 #botao_cadastrar_container {
@@ -196,19 +232,23 @@ input:valid {
 
 /* PARTE REFERENTE A LISTA DE CONTATOS  */
 
+#lista_contatos h1 {
+    font-family: 'Helvetica' !important;
+    font-size: 25px;
+}
+
 #lista_contatos {
-    background-color: none;
     color: #000;
-    width: 40%;
+    height: 60vh;
     text-align: -webkit-center;
     display: flex;
     flex-direction: column;
     width: 100%;
-    width: 100%;
     align-items: center;
+    justify-content: space-evenly;
+
 }
 
-/* table */
 #tabela_cadastros {
     max-width: 60%;
     border-collapse: collapse;
@@ -220,7 +260,9 @@ input:valid {
 }
 
 table tr th {
-    border-right: 1px solid #29abe2;
+    border-right: 2px solid #29abe2;
+    font-family: 'RobotoRegular';
+    font-size: 14px;
 }
 
 table tr th:last-child {
@@ -228,60 +270,44 @@ table tr th:last-child {
 }
 
 table tr td {
-    border-top: 1px solid #29abe2;
-    border-right: 1px solid #29abe2;
+    border-top: 2px solid #29abe2;
+    border-right: 2px solid #29abe2;
+    font-family: 'Helvetica';
+    font-size: 12px;
+    min-width: 140px;
+}
+
+table tr td:first-child {
+    font-family: 'RobotoLight';
+    font-size: 12px;
+    min-width: 70px;
 }
 
 table tr td:last-child {
-    border-top: 1px solid #29abe2;
+    border-top: 2px solid #29abe2;
     border-right: none;
 }
 
 /* PARTE REFERENTE AO RODAPÉ */
 
-.rodape { /*CONFIGURAÇÕES COMUNS DO RODAPÉ*/
+#rodape { /*CONFIGURAÇÕES COMUNS DO RODAPÉ*/
     width: 100%;
     height: 35vh;
-    background-image:url(./imagens/rodape-desktop.jpg);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: space-around;
-    justify-content: space-around;
+    justify-content: center;
     box-sizing: border-box;
-}
-
-.rodape_infos { /*CONFIGURAÇÕES DAS INFORMAÇÕES*/
+    text-align-last: center;
     font-size: 14px;
     color: white;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.background_section_one {
-	background-image: url('./imagens/index-image.jpg');
+.background_rodape {
+    background-image:url(./imagens/rodape-desktop.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
     z-index: -1;
-}
-.parallex_bg_img {
-	background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20201009/pngtree-dark-green-cyan-paper-cut-minimalist-background-for-brochure-poster-banner-image_405384.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
 }
