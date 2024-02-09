@@ -31,16 +31,16 @@
                 <p class="menu_item" >•</p>
                 <a class="menu_item" href="#">Sobre Mim</a>
             </div>
-            <div class="itens_cabecalho_mobile">
-                <button class="dropbtn">
-                <img id="hamburguer" src="./icones/hamburguer.svg" alt="">
+            <nav id="nav" class="itens_cabecalho_mobile">
+                <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+                    <span id="hamburger"></span>
                 </button>
                 <div class="dropdown-content">
                     <a href="#">Cadastro</a>
                     <a href="#">Lista</a>
                     <a href="#">Sobre Mim</a>
                 </div>
-            </div>
+            </nav>
         </header>
         <section id="apresentacao_prova" class="background_section_apresentacao">
             <div class="textos_pagina_apresentacao">
@@ -112,8 +112,7 @@
                     <td>(14) 6666-6666</td>
                 </tr>
             </table>
-        </section>
-        
+        </section>        
 
         <footer class="background_rodape">
             <span id="rodape">

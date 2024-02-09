@@ -21,3 +21,17 @@ CORES:
 - Títulos das colunas da tabela:#012d51
 - Linhas da tabela: #29abe2
 - Informações da tabela: #808080
+
+
+
+• FEITO Nos vamos colocar as duas imagens no HTML
+
+• FEITO Em "laptop" vamos tirar as duas imagens
+
+• Em "tablet" vamos deixar as duas imagens.
+	hamburguer_fechado: ativa e com as configurações
+	hamburguer_aberto: none
+
+• Quando o drop estiver ativo vamos deixar as duas imagens.
+	hamburguer_fechado: none
+	hamburguer_aberto: ativo e com as configurações.

@@ -24,10 +24,6 @@
     font-style: normal;
 }
 
-* {
-    /* border: #ff0000 1px solid; */
-}
-
 /* PARTE REFERENTE AO CABEÇALHO */
 
 .toda_a_pagina { /*CONFIGURAÇÕES COMUNS DE TODA A PÁGINA*/
@@ -48,12 +44,12 @@
     background: linear-gradient(#000000bb, #00000000);
 }
 
-.logo_cabecalho {
+.logo_cabecalho { /*CONFIGURAÇÕES DA LOGO*/
     height: 100%;
     width: 50%;
 }
 
-.logo_cabecalho a {
+.logo_cabecalho a { /*CONFIGURAÇÕES DO LINK DA LOGO*/
     display: flex;
     height: 100%;
     width: 100%;
@@ -79,22 +75,26 @@
     font-size: 20px;
 }
 
-#cabecalho p {
+.itens_cabecalho_mobile {
+    display: none;
+}
+
+#cabecalho p { /*CONFIGURAÇÕES DO PARAGRAFO DO CABEÇALHO*/
     color: white;
     text-decoration: none;
     cursor: default;
-}
-
-.menu_item:hover {
-    text-decoration: underline;
-    color: white;
-    text-underline-offset: 5px;
 }
 
 .menu_item { /*AS OPÇÕES DE MENU*/
     margin: 0px 2% 0px 2%;
     color: white;
     text-decoration: none;
+}
+
+.menu_item:hover { /*AS OPÇÕES DE MENU QUANDO CLICA*/
+    text-decoration: underline;
+    color: white;
+    text-underline-offset: 5px;
 }
 
 /* PARTE REFERENTE A APRESENTAÇÃO */
@@ -313,42 +313,30 @@ table tr td:last-child {
     z-index: -1;
 }
 
-.itens_cabecalho_mobile {
-    display: none;
-}
-
 /* considerando as dimensões do dev tools do google, 768 é o tamanho limite dos dispositivos moveis */
 @media (max-width: 768px) {
+
+    #cabecalho {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
 
     .itens_cabecalho {
         display: none;
     }
+
     .itens_cabecalho_mobile {
         float: left;
         overflow: hidden;
         display: block;
         height: 10vh;
         width: 200px;
+        border: none;
+        color: #29abe2;
     }
 
     .itens_cabecalho_mobile:hover {
         background-color: #29abe2;
-    }
-
-    .itens_cabecalho_mobile .dropbtn {
-        font-size: 16px;  
-        border: none;
-        outline: none;
-        color: white;
-        padding: 14px 16px;
-        background-color: inherit;
-        font-family: inherit;
-        margin: 0;
-        height: 10vh;
-    }
-
-    .dropbtn {
-        background: #29abe2;
     }
 
     .dropdown-content {
@@ -358,8 +346,12 @@ table tr td:last-child {
         font-family: 'Helvetica';
         font-size: 16px;
         min-width: 200px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
+        border: none;
+    }
+
+    .displayBlock {
+        display: block !important;
     }
 
     .dropdown-content a {
@@ -374,27 +366,59 @@ table tr td:last-child {
     .dropdown-content a:hover {
         background-color: #6fbbdb;
     }
-    
+
     .itens_cabecalho_mobile:hover .dropdown-content {
         display: block;
     }
 
-    #cabecalho {
-        flex-direction: row-reverse;
-        justify-content: space-between;
+    #nav.active #menu {
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    #dropdown-content a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border: none;
+        color: white;
+    }
+    #btn-mobile {
+        display: flex;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 0.5rem;
+        color:#29abe2;
     }
 
-    #hamburguer {
-        display: flex;
-        justify-content: center;
-        height: 100%;
+    #hamburger {
+        border-top: 2px solid;
+        width: 20px;
+    }
+    
+    #hamburger::after, #hamburger::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: 0.3s;
+        position: relative;
+    }
+    
+    #nav.active #hamburger {
+        color: white
+    }
+    
+    #nav.active #hamburger::before {
+        color: white
     }
 
-    #hamburguer:hover {
-        display: flex;
-        background-image:url(./icones/hamburguer-aberto0.svg);
-        justify-content: center;
-        width: 7%;
-        height: 100%;
+    #nav.active #hamburger::after {
+        color: white
     }
+    
 }
