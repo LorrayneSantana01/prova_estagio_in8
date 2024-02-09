@@ -151,12 +151,12 @@
     background-color: #29abe2;
     text-align: center;
     font-family: 'Helvetica';
-    font-size: 25px;
+    font-size: 16px;
     font-weight: 100;
 }
 
 #fazer_cadastro h1 {
-    font-size: 25px;
+    font-size: 16px;
 }
 
 .formulario {
@@ -165,8 +165,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    padding: 20px;
-    width: 30%;
+    padding: 16px;
+    width: 50%;
 }
 
 label {
@@ -181,31 +181,34 @@ input {
     border: none;
     border-bottom: 1px solid white;
     color: white;
+    font-size: 16px;
 }
 
 input[type="date"] {
-    color: #ffffff;
+    color: #fffff2bb;
     font-family: 'Helvetica';
-    font-size: 25px;
+    font-size: 16px;
   }
 
 input::placeholder {
-    color: white;
+    color: #fffff2bb;
     background: none;
     margin: none;
     font-family: 'Helvetica';
-    font-size: 25px;
+    font-size: 16px;
 }
 
 input:focus {
     color: white;
     outline: none;
     font-family: 'Helvetica';
-    font-size: 25px;
+    font-size: 16px;
 }
 
 input:valid {
     margin: none;
+    color: white;
+    font-size: 16px;
 }
 
 .botao_cadastrar {
@@ -213,14 +216,13 @@ input:valid {
     color: #29abe2;
     cursor: pointer;
     font-family: 'ps';
-    font-size: 25px;
+    font-size: 20px;
     padding: 1% 5% 1% 5%;
     border-width: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     font-family: 'Helvetica';
-    font-size: 25px;
     font-weight: 100;
 }
 
@@ -246,7 +248,6 @@ input:valid {
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
-
 }
 
 #tabela_cadastros {
@@ -274,13 +275,13 @@ table tr td {
     border-right: 2px solid #29abe2;
     font-family: 'Helvetica';
     font-size: 12px;
-    min-width: 140px;
+    /* min-width: 140px; */
 }
 
 table tr td:first-child {
     font-family: 'RobotoLight';
     font-size: 12px;
-    min-width: 70px;
+    min-width: 30px;
 }
 
 table tr td:last-child {
@@ -310,4 +311,90 @@ table tr td:last-child {
 	background-position: center;
 	background-size: cover;
     z-index: -1;
+}
+
+.itens_cabecalho_mobile {
+    display: none;
+}
+
+/* considerando as dimensões do dev tools do google, 768 é o tamanho limite dos dispositivos moveis */
+@media (max-width: 768px) {
+
+    .itens_cabecalho {
+        display: none;
+    }
+    .itens_cabecalho_mobile {
+        float: left;
+        overflow: hidden;
+        display: block;
+        height: 10vh;
+        width: 200px;
+    }
+
+    .itens_cabecalho_mobile:hover {
+        background-color: #29abe2;
+    }
+
+    .itens_cabecalho_mobile .dropbtn {
+        font-size: 16px;  
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+        height: 10vh;
+    }
+
+    .dropbtn {
+        background: #29abe2;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #29abe2;
+        font-family: 'Helvetica';
+        font-size: 16px;
+        min-width: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        float: none;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        color: white
+    }
+
+    .dropdown-content a:hover {
+        background-color: #6fbbdb;
+    }
+    
+    .itens_cabecalho_mobile:hover .dropdown-content {
+        display: block;
+    }
+
+    #cabecalho {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    #hamburguer {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+    }
+
+    #hamburguer:hover {
+        display: flex;
+        background-image:url(./icones/hamburguer-aberto0.svg);
+        justify-content: center;
+        width: 7%;
+        height: 100%;
+    }
 }
